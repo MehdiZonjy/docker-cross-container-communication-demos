@@ -22,6 +22,13 @@ a Really bad idea. If app container restarts with different ip, the /etc/hosts w
 - Run app container
 - grab db ip and update /etc/hosts in app container
 
+## Shared Network namespace
+It's possible for multiple containers to share the same network namespace `--network container:<containerName>`.
+In such case they can communicate via loopback interface `localhost`.
+- Containers can't publish any ports, only the container which owns the network stack can publish ports
+- in such case it might be better to create an intial dummy container owns the network stack and publishes all the necessery ports. Then make all other containers share its network stack
+
+
 
 References:
 - [Legacy container links](https://docs.docker.com/network/links/)
