@@ -17,7 +17,7 @@ This has been deprecated and will be removed at some point
 
 
 ## Default Network and manually update /etc/hosts
-a Really bad idea. If app container restarts with different ip, the /etc/hosts will be out of sync
+a Really bad idea. If containers restarts with different ip, the /etc/hosts will be out of sync
 - Run db container
 - Run app container
 - grab db ip and update /etc/hosts in app container
