@@ -21,3 +21,8 @@ a Really bad idea. If app container restarts with different ip, the /etc/hosts w
 - Run db container
 - Run app container
 - grab db ip and update /etc/hosts in app container
+
+
+References:
+- [Legacy container links](https://docs.docker.com/network/links/)
+- [Bridge Networks](https://docs.docker.com/network/bridge/)
