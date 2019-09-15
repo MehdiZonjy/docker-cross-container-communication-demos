@@ -12,7 +12,7 @@ docker run -d --rm --net $BRIDGE --name app -p 3000:3000 --hostname app --env-fi
 
 
 echo 'press anything to exit'
-read q
+read
 
 ! docker stop db
 ! docker stop app
