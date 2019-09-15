@@ -22,7 +22,7 @@ a Really bad idea. If containers restarts with different ip, the /etc/hosts will
 - Run app container
 - grab db ip and update /etc/hosts in app container
 
-## Shared Network namespace
+## Shared Network Stack
 It's possible for multiple containers to share the same network namespace `--network container:<containerName>`.
 In such case they can communicate via loopback interface `localhost`.
 - Containers can't publish any ports, only the container which owns the network stack can publish ports
@@ -33,3 +33,4 @@ In such case they can communicate via loopback interface `localhost`.
 References:
 - [Legacy container links](https://docs.docker.com/network/links/)
 - [Bridge Networks](https://docs.docker.com/network/bridge/)
+- [Shared Network Stack](https://docs.docker.com/engine/reference/run/#network-container)
